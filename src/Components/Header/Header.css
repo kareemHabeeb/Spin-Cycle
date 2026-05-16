@@ -1,0 +1,62 @@
+.HeaderContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.HeaderWrapper {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.HeaderLogoDiv {
+  width: 20%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.HeaderPagesHolder {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  span {
+    font-size: 16px;
+    color: #0017cc;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}
+
+.HeaderButton {
+  width: 116px;
+  height: 39px;
+  opacity: 1;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+
+  &:hover {
+    cursor: pointer;
+    color: #0017cc;
+    background: #b6e7fc;
+  }
+}

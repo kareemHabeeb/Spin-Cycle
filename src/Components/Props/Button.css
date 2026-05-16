@@ -1,0 +1,9 @@
+.buttonMaster {
+  width: 10rem;
+  height: 60px;
+  background: #0017cc;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}

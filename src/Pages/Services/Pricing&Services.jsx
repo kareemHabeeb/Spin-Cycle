@@ -1,8 +1,8 @@
 import React from "react";
 import "./Pricing&Services.css";
-import Header from "../../../Components/Header/Header";
-import Button from "../../../Components/Props/Button";
-import Footer from "../../../Components/Footer/Footer";
+import Header from "../../Components/Header/Header";
+import Button from "../../Components/Props/Button";
+import Footer from "../../Components/Footer/Footer";
 
 const Pricing = () => {
   return (

@@ -3,5 +3,244 @@
   height: auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.HomeWrapper {
+  width: 100%;
+  height: 620px;
+  opacity: 1;
+  background: linear-gradient(to right, #ffffff, #b6e7fc);
+  position: relative;
+  display: flex;
+  gap: 3rem;
+
+  .bubbles {
+    width: 50;
+    height: 50;
+    top: 34px;
+    left: 50px;
+    opacity: 1;
+    position: absolute;
+  }
+}
+
+.HomeTopSecLeft {
+  width: 800px;
+  height: 485px;
+  gap: 14px;
+  position: relative;
+  top: 149px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+
+.smartText {
+  width: 702;
+  height: 210;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  opacity: 1;
+}
+
+.BelowSmartText {
+  width: 1512;
+  height: 709;
+  position: absolute;
+  top: 230px;
+  left: 60px;
+  opacity: 1;
+}
+
+.iconsImg {
+  width: 722px;
+  height: 38px;
+  opacity: 1;
+  position: absolute;
+  top: 300px;
+  left: 50px;
+}
+
+.HomeBtnHolder {
+  width: 722px;
+  height: 59px;
+  gap: 40px;
+  opacity: 1;
+  display: flex;
+  position: absolute;
+  top: 340px;
+  left: 50px;
+}
+
+.HomePickupBtn {
+  width: 182px;
+  height: 39px;
+  gap: 10px;
+  opacity: 1;
+  border-radius: 5px;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  &:hover {
+    cursor: pointer;
+    background: #baebff;
+    color: #0017cc;
+  }
+}
+
+.HomePricingBtn {
+  width: 182px;
+  height: 39px;
+  gap: 10px;
+  opacity: 1;
+  border: 1px solid #0017cc;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #0017cc;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+    background: #baebff;
+    color: #0017cc;
+    border: none;
+  }
+}
+
+.WhatWeDo {
+  width: 100%;
+  height: 656px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PrecisionCare {
+  width: 100%;
+  height: 792px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Services {
+  width: 100%;
+  height: 717px;
+  opacity: 1;
+  display: flex;
+  background: #effafe;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ServiceSecLeft {
+  width: 673px;
+  height: 552px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+  opacity: 1;
+}
+
+.ServicesTextImg {
+  width: 673px;
+  height: 432px;
+  opacity: 1;
+}
+
+.ServiceSecRight {
+  width: 549px;
+  height: 618px;
+  opacity: 1;
+}
+
+.HomeBtnHolder2 {
+  width: 590px;
+  height: 64px;
+  gap: 32px;
+  opacity: 1;
+  display: flex;
+}
+
+.HomePickupBtn2 {
+  width: 269px;
+  height: 64px;
+  gap: 10px;
+  opacity: 1;
+  border-radius: 5px;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  &:hover {
+    cursor: pointer;
+    background: #baebff;
+    color: #0017cc;
+  }
+}
+
+.HomePricingBtn2 {
+  width: 269px;
+  height: 64px;
+  gap: 10px;
+  opacity: 1;
+  border: 1px solid #0017cc;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #0017cc;
+
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+    background: #baebff;
+    color: #0017cc;
+    border: none;
+  }
+}
+
+.ScheduleImg {
+  width: 100%;
+  height: 183px;
+  opacity: 1;
+}
+
+.ItemsCleaned {
+  width: 100%;
+  height: 927px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 95%;
+    height: 775px;
+    opacity: 1;
+    border-radius: 16px;
+  }
+}
+
+.Download {
+  width: 100%;
+  height: 202px;
+  opacity: 1;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Props/Button";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,10 +11,14 @@ const Header = () => {
           <img src="src/assets/SpinLogo.PNG" alt="" />
         </div>
         <nav className="HeaderPagesHolder">
-          <span>Home</span>
+          <Link style={{ textDecoration: "none" }} to={"/"}>
+            <span>Home</span>
+          </Link>
           <span>Abut Us</span>
           <span>How it Works</span>
-          <span>Pricing and Services</span>
+          <Link style={{ textDecoration: "none" }} to={"/pricing&services"}>
+            <span>Pricing and Services</span>
+          </Link>
           <span>For Business</span>
         </nav>
         <Button className="HeaderButton" text="Book Now" />

@@ -14,7 +14,10 @@ const Header = () => {
           <Link style={{ textDecoration: "none" }} to={"/"}>
             <span>Home</span>
           </Link>
-          <span>Abut Us</span>
+          <Link  style = {{ textDecoration: "none" }}to={"/about"}>
+            <span>Abut Us</span>
+          </Link>
+
           <span>How it Works</span>
           <Link style={{ textDecoration: "none" }} to={"/pricing&services"}>
             <span>Pricing and Services</span>

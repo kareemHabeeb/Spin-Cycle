@@ -117,22 +117,167 @@
   }
 }
 
-.WhatWeDo {
+.What {
   width: 100%;
   height: 656px;
   opacity: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background: #baebff;
+  justify-content: space-around;
+  position: relative;
+
+  .BigCircles1 {
+    position: absolute;
+    top: 64%;
+    left: 32%;
+  }
+  .BigCircles2 {
+    position: absolute;
+    top: 14%;
+    left: 32%;
+  }
+
+  .WhatWeDOLeft {
+    width: 573px;
+    height: 478px;
+    opacity: 1;
+    gap: 38px;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+      width: 573px;
+      height: 50px;
+      opacity: 1;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      width: 573px;
+      height: 98px;
+      padding: 10px;
+      opacity: 1;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      width: 573px;
+      height: 150px;
+      opacity: 1;
+      gap: 10px;
+      padding: 10px;
+      font-family: Inter;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 16px;
+      leading-trim: NONE;
+      line-height: 26px;
+      letter-spacing: 0%;
+    }
+
+    .plus {
+      width: 573px;
+      height: 122px;
+      angle: 0 deg;
+      opacity: 1;
+      object-fit: cover;
+      padding-top: 18px;
+      padding-right: 10px;
+      padding-bottom: 18px;
+      padding-left: 10px;
+      gap: 31px;
+    }
+  }
+
+  .WhatWeDORight {
+    width: 703px;
+    height: 470px;
+    opacity: 1;
+  }
 }
 
-.PrecisionCare {
+.Precision {
   width: 100%;
   height: 792px;
   opacity: 1;
   display: flex;
+  background: linear-gradient(to right, #b6e7fc, 20%, #ffffff 80%);
   align-items: center;
   justify-content: center;
+
+  .PrecisionWrapper {
+    width: 95%;
+    height: 633px;
+    justify-content: space-between;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .PrecisionLeft {
+    width: 659px;
+    height: 399px;
+    opacity: 1;
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+      width: 477px;
+      height: 144px;
+      opacity: 1;
+      padding-right: 10px;
+      padding-left: 10px;
+      gap: 20px;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0%;
+      color: #00baf2;
+    }
+
+    span {
+      width: 574px;
+      height: 140px;
+      opacity: 1;
+      padding-right: 10px;
+      padding-left: 10px;
+      gap: 20px;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+    }
+
+    img {
+      width: 659px;
+      height: 43px;
+      opacity: 1;
+      object-fit: contain;
+    }
+  }
+
+  .PrecisionRight {
+    width: 640px;
+    height: 633px;
+    opacity: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    gap: 10px;
+  }
 }
 
 .Services {

@@ -36,10 +36,258 @@
   width: 100%;
   height: 1408px;
   opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .QrCodeWrapper {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .QrCode1 {
+      width: 100%;
+      height: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .QrCodeCategories {
+        width: 45%;
+        height: 15%;
+        opacity: 1;
+        background: #caecfa33;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 32px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        border-radius: 10px;
+      }
+    }
+
+    .QrCode2 {
+      width: 100%;
+      height: 17%;
+      opacity: 1;
+      gap: 292px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      nav {
+        width: 502px;
+        height: 78px;
+        opacity: 1;
+
+        font-family: Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0%;
+      }
+    }
+
+    .QrCode3 {
+      width: 100%;
+      height: 14%;
+      opacity: 1;
+      gap: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 624px;
+        height: 241px;
+        opacity: 1;
+        object-fit: contain;
+      }
+    }
+  }
 }
 
 .LaundrySchedule {
-  width: 100%;
+  width: 95%;
   height: 559px;
   opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  .SheduleLeft {
+    width: 40%;
+    height: 410px;
+    opacity: 1;
+    gap: 21px;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+      width: 436px;
+      height: 86px;
+      opacity: 1;
+      gap: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 32px;
+      line-height: 30px;
+      letter-spacing: 0%;
+
+      span {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0%;
+      }
+    }
+    .ScheduleInputHolder {
+      width: 639px;
+      height: 87px;
+      opacity: 1;
+      gap: 12px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        width: 130px;
+        height: 24px;
+        opacity: 1;
+        padding-right: 10px;
+        padding-left: 10px;
+        gap: 10px;
+      }
+
+      input {
+        width: 639px;
+        height: 51px;
+        opacity: 1;
+        border: 1px solid rgb(204, 202, 202);
+        padding: 10px;
+        outline: none;
+      }
+    }
+  }
+
+  .scheduleRight {
+    width: 40%;
+    height: 463px;
+    opacity: 1;
+    gap: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .ScheduleInputRight {
+      width: 637px;
+      height: 87px;
+      opacity: 1;
+      gap: 12px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        width: 160px;
+        height: 24px;
+        opacity: 1;
+        padding-right: 10px;
+        padding-left: 10px;
+        gap: 10px;
+        font-family: Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+
+      input {
+        width: 637px;
+        height: 51px;
+        opacity: 1;
+        border: 1px solid rgb(204, 202, 202);
+        padding: 10px;
+        outline: none;
+      }
+    }
+  }
+}
+
+.ScheduleInputRight2 {
+  width: 637px;
+  height: 133px;
+  opacity: 1;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    width: 160px;
+    height: 24px;
+    opacity: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    gap: 10px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .Scheduleinput2 {
+    width: 637px;
+    height: 133px;
+    opacity: 1;
+    border: 1px solid rgb(204, 202, 202);
+    padding: 10px;
+    outline: none;
+  }
+}
+
+.ScheduleInputRight3 {
+  width: 637px;
+  height: 141px;
+  opacity: 1;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    width: 160px;
+    height: 24px;
+    opacity: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    gap: 10px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .Scheduleinput3 {
+    width: 637px;
+    height: 170px;
+    opacity: 1;
+    border: 1px solid rgb(204, 202, 202);
+    padding: 10px;
+    outline: none;
+  }
 }

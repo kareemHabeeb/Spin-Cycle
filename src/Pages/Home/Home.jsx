@@ -32,10 +32,54 @@ const Home = () => {
           <img src="src/assets/spincycle png 1.png" alt="" />
         </section>
       </article>
+      <article className="What">
+        <img className="BigCircles1" src="src/assets/Vector (3).png" alt="" />
+        <img className="BigCircles2" src="src/assets/Vector (3).png" alt="" />
+        <section className="WhatWeDOLeft">
+          <nav>Who we are</nav>
+          <span>
+            From garment care, <br />
+            to stain removal, to deep washing— <br />
+            we handle it all.
+          </span>
+          <p>
+            We provide expert garment care with precision and professionalism.
+            From everyday laundry and delicate fabric handling to dry cleaning
+            and advanced stain removal, SpinCycle Laundry ensures your clothes
+            are cleaned, treated, and finished to the highest standard —
+            delivering freshness, quality, and excellence every time.
+          </p>
+          <img className="plus" src="src/assets/Frame 102.png" alt="" />
+        </section>
+        <section className="WhatWeDORight">
+          <img src="src/assets/Frame 98.png" alt="" />
+        </section>
+      </article>
+      <div className="Precision">
+        <article className="PrecisionWrapper">
+          <section className="PrecisionLeft">
+            <nav>
+              Precision Care, Longer
+              <br /> Wear for all kinds of
+              <br /> garments
+            </nav>
+            <span>
+              Extending the life of your wardrobe starts with the right
+              settings. From high-performance activewear to everyday cotton,
+              we’ve mastered the art of the custom wash. Our intelligent cycles
+              are specifically tailored to your fabric types, helping to reduce
+              waste and keep your clothes looking new for years to come.
+            </span>
+            <img src="src/assets/Frame 121.png" alt="" />
+          </section>
 
-      <img className="WhatWeDo" src="src/assets/what we do.png" alt="" />
-
-      <img className="PrecisionCare" src="src/assets/fabric types.png" alt="" />
+          <img
+            className="PrecisionRight"
+            src="src/assets/Frame 116.png"
+            alt=""
+          />
+        </article>
+      </div>
 
       <div className="Services">
         <section className="ServiceSecLeft">

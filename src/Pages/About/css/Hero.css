@@ -31,3 +31,37 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 0 16px;
+
+    h1 {
+      width: 90%;
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 350px;
+  }
+
+  .hero-content {
+    padding: 0 12px;
+
+    h1 {
+      width: 95%;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+}

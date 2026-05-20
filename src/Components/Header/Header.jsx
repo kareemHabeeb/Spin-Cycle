@@ -24,7 +24,9 @@ const Header = () => {
           </Link>
           <span>For Business</span>
         </nav>
-        <Button className="HeaderButton" text="Book Now" />
+        <Link to={"/signup"}>
+          <Button className="HeaderButton" text="Book Now" />
+        </Link>
       </article>
     </main>
   );

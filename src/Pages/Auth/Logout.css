@@ -1,0 +1,43 @@
+.logout_container {
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout_holder {
+  /* width: 50%;
+    height: 50vh; */
+  width: 474px;
+  height: 502px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+.logout_text {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.logout_btn {
+  display: flex;
+  gap: 30px;
+}
+.logOutbtn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.logOutbtn2 {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}

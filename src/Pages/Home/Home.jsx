@@ -41,7 +41,7 @@ const Home = () => {
             From garment care, <br />
             to stain removal, to deep washing— <br />
             we handle it all.
-          </span>
+          </span>a
           <p>
             We provide expert garment care with precision and professionalism.
             From everyday laundry and delicate fabric handling to dry cleaning

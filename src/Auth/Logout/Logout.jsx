@@ -1,5 +1,5 @@
 import React from "react";
-import "../Auth/Logout.css";
+import "../Logout/Logout.css"
 import Button from "../../Components/Props/Button"
 
 const Logout = () => {

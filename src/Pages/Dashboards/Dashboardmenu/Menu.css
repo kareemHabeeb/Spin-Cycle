@@ -1,0 +1,36 @@
+.MenuContainer {
+  width: 299px;
+  height: 954px;
+  opacity: 1;
+  background: #0017cc;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 70px;
+  left: 0;
+}
+
+.Menuwrapper {
+  width: 227px;
+  height: 462px;
+  gap: 20px;
+  opacity: 1;
+  position: absolute;
+  top: 100.17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.MenuTap {
+  width: 227px;
+  height: 44px;
+  opacity: 1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  color: white;
+}

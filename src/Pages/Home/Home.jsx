@@ -101,7 +101,7 @@ const Home = () => {
       <article className="ItemsCleaned">
         <img src="src/assets/light blue.png" alt="" />
       </article>
-      <img className="Download" src="src/assets/dowload.png" alt="" />
+
       <Footer />
     </main>
   );

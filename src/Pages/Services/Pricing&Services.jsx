@@ -129,8 +129,6 @@ const Pricing = () => {
           </div>
         </section>
       </article>
-
-      <img className="Download" src="src/assets/dowload.png" alt="" />
       <Footer />
     </main>
   );

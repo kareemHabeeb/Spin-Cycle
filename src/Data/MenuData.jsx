@@ -35,3 +35,47 @@ export const MenuTabs = [
     Tab: "Settings",
   },
 ];
+
+export const OrderProcess = [
+  "Order ID",
+  "Amount",
+  "Payment Mode",
+  "Booking Date",
+  "Delivery/Pickup Date",
+  "Delivery Mode",
+  "Status",
+  "Action",
+];
+
+export const Orders = [
+  {
+    id: "#SC7800736",
+    amount: "₦50,000",
+    payment: "Card",
+    bookingDate: "9th March",
+    deliveryDate: "11th March",
+    deliveryMode: "Delivery",
+    status: "New Request",
+    statusClass: "new",
+  },
+  {
+    id: "#SC340052",
+    amount: "₦72,500",
+    payment: "Pos Machine",
+    bookingDate: "10th March",
+    deliveryDate: "11th March",
+    deliveryMode: "Delivery",
+    status: "Completed",
+    statusClass: "completed",
+  },
+  {
+    id: "#SC129053",
+    amount: "₦180,000",
+    payment: "Transfer",
+    bookingDate: "14th March",
+    deliveryDate: "16th March",
+    deliveryMode: "Pick Up",
+    status: "In Progress",
+    statusClass: "progress",
+  },
+];

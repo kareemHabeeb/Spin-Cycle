@@ -7,6 +7,7 @@ import Signup from "./Auth/Signup/Signup";
 import Logout from "./Auth/Logout/Logout";
 import Login from "./Auth/Login/Login";
 import Overview from "./Pages/Dashboards/Overview/Overview";
+import Business from "./Pages/Business/Business";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/business" element={<Business />} />
         <Route path="/login" element={<Login />} />
         <Route path="/overview" element={<Overview />} />
       </Routes>

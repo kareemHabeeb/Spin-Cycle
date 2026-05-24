@@ -22,9 +22,11 @@ const Header = () => {
           <Link style={{ textDecoration: "none" }} to={"/pricing&services"}>
             <span>Pricing and Services</span>
           </Link>
-          <span>For Business</span>
+          <Link style={{ textDecoration: "none" }} to={"/business"}>
+            <span>For Business</span>
+          </Link>
         </nav>
-        <Link to={"/signup"}>
+        <Link style={{ textDecoration: "none" }} to={"/signup"}>
           <Button className="HeaderButton" text="Book Now" />
         </Link>
       </article>

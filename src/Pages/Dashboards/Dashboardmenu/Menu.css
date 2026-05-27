@@ -22,8 +22,9 @@
 }
 
 .MenuTap {
-  width: 227px;
+  width: 180px;
   height: 44px;
+  padding-left: 10px;
   opacity: 1;
   border-radius: 5px;
   display: flex;

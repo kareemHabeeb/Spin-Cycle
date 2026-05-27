@@ -9,9 +9,7 @@ import OrderSchedule from "../../../Components/Header/OrderSchedules/OrderSchedu
 const Overview = () => {
   return (
     <main className="Overview">
-      <Head />
       <article className="OverviewWrapper">
-        <Menu />
         <div className="OverviewCotent">
           <section className="OverviewTop">
             <article className="OverviewBox">

@@ -1,0 +1,86 @@
+.pickupSchedule {
+  width: 80%;
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.scheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.scheduleHeader h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+
+.assignBtn {
+  padding: 12px 20px;
+  border: 1px solid #1d4ed8;
+  background: white;
+  color: #1d4ed8;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scheduleTable {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns:
+    1fr
+    1.4fr
+    1.5fr
+    1.2fr
+    1fr
+    1fr
+    1.7fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.tableHead {
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableRow {
+  padding: 22px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.tableRow p,
+.tableHead p {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+.status {
+  color: green !important;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .scheduleTable {
+    overflow-x: scroll;
+  }
+
+  .tableHead,
+  .tableRow {
+    min-width: 1000px;
+  }
+}

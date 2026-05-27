@@ -1,0 +1,122 @@
+.paymentsContainer {
+  width: 80%;
+  min-height: 100vh;
+  background: #f4f5f7;
+  padding: 35px 30px;
+  font-family: sans-serif;
+}
+
+.paymentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.paymentsHeader h1 {
+  font-size: 28px;
+  color: #222;
+}
+
+.exportBtn {
+  border: none;
+  background: white;
+  padding: 14px 26px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.paymentsTabs {
+  display: flex;
+  align-items: center;
+  background: white;
+  width: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.paymentsTabs button {
+  border: none;
+  padding: 14px 22px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.activeTab {
+  background: white;
+  color: #222;
+}
+
+.inactiveTab {
+  background: #f8f8f8;
+  color: #b1b1b1;
+}
+
+.paymentsTable {
+  width: 100%;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns:
+    1.5fr
+    1.4fr
+    1.2fr
+    1.4fr
+    1fr;
+
+  gap: 20px;
+  align-items: center;
+}
+
+.tableHead {
+  margin-bottom: 25px;
+}
+
+.tableHead p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+}
+
+.tableRow {
+  padding: 18px 0;
+}
+
+.tableRow p {
+  font-size: 14px;
+  color: #222;
+}
+
+.successStatus {
+  color: green !important;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .paymentsTable {
+    overflow-x: auto;
+  }
+
+  .tableHead,
+  .tableRow {
+    min-width: 750px;
+  }
+
+  .paymentsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,60 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+}
+
+.order-table thead tr {
+  text-align: left;
+}
+
+.order-table th {
+  padding: 18px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d1d1d;
+  white-space: nowrap;
+}
+
+.order-table td {
+  padding: 18px 24px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.order-table tbody tr {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.order-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Status Colors */
+
+.completed {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.progress {
+  color: #ef6c00;
+  font-weight: 500;
+}
+
+.cancelled {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.new {
+  color: #1a73e8;
+  font-weight: 500;
+}

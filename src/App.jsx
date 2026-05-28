@@ -8,6 +8,7 @@ import Logout from "./Auth/Logout/Logout";
 import Login from "./Auth/Login/Login";
 import Overview from "./Pages/Dashboards/Overview/Overview";
 import Business from "./Pages/Business/Business";
+import Pickup from "./Pages/Dashboards/Pickup Schedule/Pickup";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/business" element={<Business />} />
         <Route path="/login" element={<Login />} />
         <Route path="/overview" element={<Overview />} />
+        <Route path="/pickup schedule" element ={<Pickup />} />
       </Routes>
     </BrowserRouter>
   );

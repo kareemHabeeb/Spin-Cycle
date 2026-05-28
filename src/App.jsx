@@ -8,7 +8,11 @@ import Logout from "./Auth/Logout/Logout";
 import Login from "./Auth/Login/Login";
 import Overview from "./Pages/Dashboards/Overview/Overview";
 import Business from "./Pages/Business/Business";
-import Pickup from "./Pages/Dashboards/Pickup Schedule/Pickup";
+import Layout from "./Pages/DashboardLayout/Layout";
+import Order from "./Pages/Dashboards/Order/Order";
+import Pickup from "./Pages/Dashboards/PickUp/Pickup";
+import StaffRiders from "./Pages/Dashboards/Staffs/Staff";
+import Payments from "./Pages/Dashboards/DashBoardHead/payments/Payment";
 
 const App = () => {
   return (
@@ -21,8 +25,13 @@ const App = () => {
         <Route path="/logout" element={<Logout />} />
         <Route path="/business" element={<Business />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/overview" element={<Overview />} />
-        <Route path="/pickup schedule" element ={<Pickup />} />
+        <Route path="/dashboard" element={<Layout />}>
+          <Route index element={<Overview />} />
+          <Route path="orders" element={<Order />} />
+          <Route path="pickup" element={<Pickup />} />
+          <Route path="staff" element={<StaffRiders />} />
+          <Route path="payments" element={<Payments />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

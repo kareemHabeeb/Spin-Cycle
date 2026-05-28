@@ -30,27 +30,40 @@
   width: 50%;
   height: 80%;
   display: flex;
-  align-items: center;
+
   justify-content: center;
+  align-items: center;
+}
+.SearchDiv {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(235, 234, 234);
+  border-radius: 7px;
 
   div {
-    width: 70%;
-    height: 80%;
+    width: 27px;
+    height: 40px;
+    opacity: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
-    border: 2px solid rgb(235, 234, 234);
-    border-radius: 7px;
+    justify-content: end;
 
-    input {
-      width: 90%;
+    img {
+      width: 70%;
       height: 80%;
-      border: none;
-      outline: none;
-      font-size: 14px;
+      object-fit: contain;
     }
   }
+}
+
+.SearchInput {
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
 
 .DashHeadProfile {

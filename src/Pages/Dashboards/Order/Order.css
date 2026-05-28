@@ -78,6 +78,8 @@
 
 /* Table Wrapper */
 .table-wrapper {
+  width: 100%;
+  padding-left: 30px;
   background-color: white;
   border-radius: 8px;
   overflow-x: auto;
@@ -156,15 +158,17 @@
 
 /* Pagination Styles */
 .pagination-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 30px 0px;
   font-size: 13px;
   color: #666;
 }
 
 .pagination-info {
+  padding-left: 40px;
   flex: 1;
 }
 

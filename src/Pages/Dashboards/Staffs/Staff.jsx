@@ -1,56 +1,66 @@
-import React, { useState } from "react";
-import "../Staffs/StaffsRidersStyles/Staff.css"
+import React, { useState, useEffect } from "react";
+import "./StaffsRidersStyles/Staff.css";
 import { useNavigate } from "react-router-dom";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useParams } from "react-router-dom";
 
 const StaffRiders = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [staffData, setStaffData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [totalStaff, setTotalStaff] = useState(0);
+  const [onDuty, setOnDuty] = useState(0);
+  const [offDuty, setOffDuty] = useState(0);
+
+  const { ids } = useParams();
 
   const nav = useNavigate();
-  const staffData = [
-    {
-      id: "#SC-2009-23",
-      name: "Mr Fihan",
-      position: "Driver",
-      date: "12th Jan 2009",
-      phone: "08134009500",
-      status: "On Duty",
-    },
-    {
-      id: "#SC-2009-24",
-      name: "Mrs Akpan",
-      position: "Receptionist",
-      date: "15th April 2009",
-      phone: "08134009500",
-      status: "On Duty",
-    },
-    {
-      id: "#SC-2008-25",
-      name: "Mr Raheem",
-      position: "Driver",
-      date: "3rd Jan 2009",
-      phone: "08134009600",
-      status: "Off Duty",
-    },
-    {
-      id: "#SC-2009-23",
-      name: "Mr Fihan",
-      position: "Driver",
-      date: "12th Jan 2009",
-      phone: "08134009500",
-      status: "On Duty",
-    },
-  ];
+  const baseURL = import.meta.env.VITE_BASE_URL;
+  const token = localStorage.getItem("token");
 
-  const itemsPerPage = 9;
-  const totalPages = 3;
+  const fetchStaffData = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(`${baseURL}/api/staff/staffs`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
-  const paginatedData = staffData.slice(0, itemsPerPage);
+      console.log("Staff data response:", response.data);
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
+      const staffList = response.data.data || [];
+
+      const staffWithIds = staffList.map((staff, index) => ({
+        ...staff,
+        displayId: `#SC-${String(index + 1).padStart(4, "0")}`,
+        displayStatus: index % 2 === 0 ? "On Duty" : "Off Duty",
+      }));
+
+      setStaffData(staffWithIds);
+      setTotalStaff(staffWithIds.length);
+
+      const onDutyCount = staffWithIds.filter(
+        (staff) => staff.displayStatus === "On Duty",
+      ).length;
+      const offDutyCount = staffWithIds.length - onDutyCount;
+
+      setOnDuty(onDutyCount);
+      setOffDuty(offDutyCount);
+    } catch (error) {
+      console.error("Error fetching staff:", error);
+      toast.error(error.response?.data?.message || "Failed to load staff data");
+      setStaffData([]);
+    } finally {
+      setLoading(false);
+    }
   };
+
+  useEffect(() => {
+    fetchStaffData();
+  }, []);
 
   return (
     <div className="staff-container">
@@ -63,20 +73,23 @@ const StaffRiders = () => {
 
       <div className="employees-section">
         <div className="employees-item">
-          <span className="employees-item-title">32 EMPLOYEES</span>
+          <span className="employees-item-title">{totalStaff} EMPLOYEES</span>
         </div>
         <div className="stat-item">
-          <span className="item-on-duty">20 Staff on duty</span>
+          <span className="item-on-duty">{onDuty} Staff on duty</span>
         </div>
         <div className="stat-item">
-          <span className="item-on-off-duty">12 Staff off duty</span>
+          <span className="item-on-off-duty">{offDuty} Staff off duty</span>
         </div>
 
         <div className="button-holder">
-          <button className="removeAdd-btn">
+          <button className="removeAdd-btn" disabled>
             Remove Staff <FaMinus />
           </button>
-          <button className="removeAdd-btn">
+          <button
+            className="removeAdd-btn"
+            onClick={() => nav("/dashboard/addstaff")}
+          >
             <FaPlus />
             Add New Staff
           </button>
@@ -97,64 +110,69 @@ const StaffRiders = () => {
             </tr>
           </thead>
           <tbody>
-            {paginatedData.map((staff, index) => (
-              <tr key={index}>
-                <td>{staff.id}</td>
-                <td>{staff.name}</td>
-                <td>{staff.position}</td>
-                <td>{staff.date}</td>
-                <td>{staff.phone}</td>
-                <td>
-                  <span
-                    className={`status ${staff.status === "On Duty" ? "on-duty-badge" : "off-duty-badge"}`}
-                  >
-                    {staff.status}
-                  </span>
+            {loading ? (
+              <tr>
+                <td colSpan="7" className="loading-state">
+                  Loading staff data...
                 </td>
-                <td>
+              </tr>
+            ) : staffData.length === 0 ? (
+              <tr>
+                <td colSpan="7" className="empty-state">
+                  <div>👥</div>
+                  <h3>No Staff Found</h3>
+                  <p>You haven't added any staff members yet.</p>
                   <button
-                    className="view-btn"
-                    onClick={() => nav("/dashboard/staffdetailspages")}
+                    className="removeAdd-btn"
+                    onClick={() => nav("/dashboard/addstaff")}
                   >
-                    View{" "}
-                    <span className="eye-icon">
-                      <FaEyeSlash />
-                    </span>
+                    <FaPlus /> Add Your First Staff
                   </button>
                 </td>
               </tr>
-            ))}
+            ) : (
+              staffData.map((staff, index) => (
+                <tr key={staff._id || index}>
+                  <td>{staff.displayId}</td>
+                  <td>
+                    {staff.PERSONAL_INFO?.firstName || ""}{" "}
+                    {staff.PERSONAL_INFO?.lastName || ""}
+                  </td>
+                  <td>{staff.PERSONAL_INFO?.position || "-"}</td>
+                  <td>-</td>
+                  <td>{staff.PERSONAL_INFO?.phoneNumber || "-"}</td>
+                  <td>
+                    <span
+                      className={`status ${staff.displayStatus === "On Duty" ? "on-duty-badge" : "off-duty-badge"}`}
+                    >
+                      {staff.displayStatus}
+                    </span>
+                  </td>
+                  <td>
+                    <button
+                      className="view-btn"
+                      onClick={() => {
+                        const id = staff._id;
+                        const isObjectId =
+                          typeof id === "string" &&
+                          /^[0-9a-fA-F]{24}$/.test(id);
+                        if (isObjectId) {
+                          nav(`/dashboard/staffdetailspage/${id}`);
+                        } else {
+                          nav(`/dashboard/staffdetailspage/local-${index}`, {
+                            state: { staff },
+                          });
+                        }
+                      }}
+                    >
+                      View
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
-      </div>
-
-      <div className="number-section">
-        <span className="text-info">Showing 1 of {totalPages}</span>
-        <div className="number-holder">
-          <button
-            className="next-btn"
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            ‹
-          </button>
-          {[1, 2, 3].map((page) => (
-            <button
-              key={page}
-              className={`next-btn ${currentPage === page ? "active" : ""}`}
-              onClick={() => handlePageChange(page)}
-            >
-              {page}
-            </button>
-          ))}
-          <button
-            className="next-btn"
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-          >
-            ›
-          </button>
-        </div>
       </div>
     </div>
   );

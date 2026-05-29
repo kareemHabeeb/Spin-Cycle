@@ -1,0 +1,147 @@
+.AddStaff-container {
+  background-color: #f7fafc;
+  min-height: 100vh;
+  padding: 24px;
+  width: 80%;
+}
+
+.AddStaff-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  height: 70px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.sidetext {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+
+  h4 {
+    color: #6b7280;
+    font-weight: 500;
+    margin-left: 20px;
+  }
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.close-btn:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.staff-id-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1c2026;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.staff-icon {
+  font-size: 24px;
+  color: #1c2026;
+}
+
+.content-container {
+  margin-bottom: 32px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.details-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .form-group.full-width {
+  grid-column: 1 / -1;
+} */
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  padding: 12px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #111827;
+  background-color: #f9fafb;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding: 16px 0;
+}
+
+.save-btn {
+  padding: 12px 32px;
+  background-color: white;
+  color: #0017cc;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #0017cc;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #0017cc;
+  color: white;
+  border: 2px solid white;
+}
